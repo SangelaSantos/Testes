@@ -1,0 +1,185 @@
+/* ESTILO GERAL */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+body{
+    background-color: black;
+    height: 100vh; /*ocupa todo o espaço da tela*/
+    font-family: "Poppins", sans-serif;
+}
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto; /*desgruda da borda*/
+}
+.flex{
+    display: flex;
+}
+
+.botao-contato button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: blueviolet;
+    border: 0;
+    border-radius: 30px; /*coloca uma borda arredondada*/
+    cursor: pointer;
+    transition: .2s;
+}
+
+.botao-contato button:hover, form .botao-enviar input:hover{
+    box-shadow: 0px 0px 8px rgb(137, 43, 226);
+    transform: scale(1.05);
+}
+
+h2.titulo{
+    color: white;
+    font-size: 38px;
+    text-align: center;
+}
+
+h2.titulo span{
+    color: blueviolet;
+}
+
+/* CABEÇALHO */
+header{
+    padding: 40px 4%; /* distancia-se da borda */
+}
+
+header >.interface{ /* procura a interface dentro do header */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header a{ /* seleciona todos os links */
+    color: #5c5c5c;
+    text-decoration: none; /*retira o sublinhado*/
+    display: inline-block;
+    transition: .2s;
+}
+header a:hover{ 
+    color: #fff;
+    transform: scale(1.05); /*zoom*/
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 0 40px;
+}
+
+section.topo-do-port{
+    padding: 40px 4%;
+}
+
+section.topo-do-port .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px; /*afasta os que estao na flex, a imagem do texto*/
+}
+.topo-do-port h1{
+    color: #fff;
+    font-size: 40px;
+    line-height: 40px; /*aproxima só o h1*/
+}
+.topo-do-port .texto-topo-port h1 span{
+    color: blueviolet;
+}
+.topo-do-port .texto-topo-port p{
+    color: #fff;
+    margin: 35px 0; /*dá espaço em cima e em baixo de 35px e 0 de lateral*/
+}
+
+.topo-do-port .img-topo-port img{
+    position: relative; 
+    animation: flutua 2s ease-in-out infinite alternate; /*leva 2s pra terminar, ease-in-out vai ficar lento, rapido no meio e depois suave*/
+}
+@keyframes flutua{ /*só funciona se a posição for diferente de static*/
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 30px;
+    }
+}
+
+/*ESPECIALIDADES*/
+section.especialidades{
+    padding: 40px 4%;
+}
+
+section.especialidades .flex{
+    gap: 60px;
+}
+
+.especialidades .box-especialidades{
+    color: rgb(255, 255, 255);
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 35px;
+    transition: .2s;
+}
+
+.especialidades .box-especialidades i{
+    font-size: 50px;
+    color: blueviolet;
+}
+
+.especialidades .box-especialidades h3{
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+.especialidades .box-especialidades:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(137, 43, 226, 0.623);
+}
+
+/*FORMULARIO DE CONTATO*/
+section.formulario{
+    padding: 80px 4%;
+}
+
+form{
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form input, form textarea{
+    width: 100%;
+    background-color: #242424;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 18px;
+}
+
+form textarea{
+    resize: none;
+    max-height: 180px;
+}
+
+form .botao-enviar{
+   margin-top: 10px; 
+}
+
+form .botao-enviar input{
+    background-color: blueviolet;
+    color: #000;
+    font-weight: 700;
+    cursor: pointer;
+}
